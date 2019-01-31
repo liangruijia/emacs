@@ -17,9 +17,11 @@
 (global-set-key [?\C-c ?\C-/] 'comment-or-uncomment-region)
 
 ;; 切换新行
-(global-set-key (kbd "<s-return>") '(lambda()
+(global-set-key (kbd "<C-return>") '(lambda()
 				      (interactive)
 				      (move-end-of-line 1)
 				      (newline-and-indent)))
+;; 绑定magit-status
+(global-set-key (kbd "C-x g") 'magit-status)
 
 (provide 'init-keybindings)
