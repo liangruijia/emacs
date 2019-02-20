@@ -50,7 +50,7 @@ locate PACKAGE."
   (interactive)
   (unless (buffer-file-name)
     (error "No file is currently being edited"))
-nn  (when (yes-or-no-p (format "Really delete '%s'?"
+  (when (yes-or-no-p (format "Really delete '%s'?"
                              (file-name-nondirectory buffer-file-name)))
     (delete-file (buffer-file-name))
     (kill-this-buffer)))
@@ -95,5 +95,9 @@ nn  (when (yes-or-no-p (format "Really delete '%s'?"
     (setq buffer-offer-save t)
     $buf
     ))
+
+;;----------------------------------------------------------------------------
+;;
+;;----------------------------------------------------------------------------
 
 (provide 'init-function)

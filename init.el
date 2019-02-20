@@ -27,3 +27,4 @@
 (load-file custom-file)
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+(put 'set-goal-column 'disabled nil)

@@ -34,6 +34,8 @@
 				 exec-path-from-shell
 				 popwin
 				 magit
+				 evil
+				 yaml-mode
 				 )  "Default packages")
 
 (setq package-selected-packages liang/packages)

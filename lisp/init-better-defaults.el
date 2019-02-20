@@ -61,7 +61,7 @@
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
 
-;;替换选中区域nn
+;;替换选中区域
 (delete-selection-mode t)
 
 ;;设置y代表yes，n代表no
