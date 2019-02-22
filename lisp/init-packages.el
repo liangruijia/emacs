@@ -20,6 +20,8 @@
 (defvar liang/packages '(
 				 company
 				 monokai-theme
+				 solarized-theme
+				 zenburn-theme
 				 hungry-delete
 				 swiper
 				 counsel
@@ -36,6 +38,8 @@
 				 magit
 				 evil
 				 yaml-mode
+				 neotree
+				 all-the-icons
 				 )  "Default packages")
 
 (setq package-selected-packages liang/packages)

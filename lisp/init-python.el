@@ -19,4 +19,13 @@
 ;; 设置禁用全局补全
 (add-hook 'ein:notebook-mode-hook (lambda () (setq company-mode nil)))
 
+;; 设置jupyter选择键
+;; (add-hook 'ein:notebook-mode-hook (lambda () (define-key map (kbd "C-n") 'ac-next)))
+;; (add-hook 'ein:notebook-mode-hook (lambda () (define-key map (kbd "C-p") 'ac-previous)))
+
+;; 补全菜单选项快捷键
+(define-key ac-completing-map (kbd "C-n") 'ac-next)
+(define-key ac-completing-map (kbd "C-p") 'ac-previous)
+(define-key ac-completing-map (kbd "<C-tab>") 'auto-complete)
+
 (provide 'init-python)

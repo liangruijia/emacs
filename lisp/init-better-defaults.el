@@ -22,7 +22,7 @@
 ;;(set-default-font "Courier New-13")
 ;;(set-default-font "Monaco-12")
 ;;(set-default-font "Courier-13")
-(set-default-font "-*-Menlo-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+;;(set-default-font "-*-Menlo-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1")
 
 (recentf-mode 1)			
 (setq recentf-max-menu-items 25)
@@ -48,11 +48,6 @@
 
 ;; 补全后端使用anaconda
 ;;(add-to-list 'company-backends '(company-anaconda :with company-yasnippet))
-;; 补全快捷键
-(global-set-key (kbd "<C-tab>") 'company-complete)
-;; 补全菜单选项快捷键
-(define-key company-active-map (kbd "M-n") 'company-select-next)
-(define-key company-active-map (kbd "M-p") 'company-select-previous)
 
 ;;查询便捷性
 (require 'popwin)    ;;when require, wh(setq company-minimum-prefix-length 1)en not require
@@ -73,5 +68,13 @@
 
 ;;设置默认打开空白
 (setq initial-buffer-choice 'xah-new-empty-buffer)
+
+;;设置neotree的样式
+;;(require 'all-the-icons)
+
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+;; (global-set-key "\C-n" 'ac-next)
+;; (global-set-key "\C-p" 'ac-previous)
 
 (provide 'init-better-defaults)

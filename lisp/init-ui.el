@@ -14,11 +14,13 @@
 
 (provide 'init-ui)
 
-(load-theme 'monokai t)
-(custom-theme-set-faces
- 'monokai
- `(hl-line ((t (:background ,"#141414"))))
- )
+;;(load-theme 'monokai t)
+;;(load-theme 'zenburn t)
+(load-theme 'solarized-light t)
+;;(custom-theme-set-faces
+;; 'monokai
+;; `(hl-line ((t (:background ,"#141414"))))
+;; )
 ;;(load-theme 'ubuntu t)
 
 ;;(load-theme 'light-blue t)

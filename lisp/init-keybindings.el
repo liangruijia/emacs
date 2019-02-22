@@ -1,8 +1,11 @@
+;; 开启左侧导航树
+(global-set-key (kbd "<f2>") 'neotree-toggle)
+
 ;; 开启新的buffer
-(global-set-key (kbd "<f6>") 'xah-new-empty-buffer)
+(global-set-key (kbd "<f5>") 'xah-new-empty-buffer)
 
 ;; 切换到jupyter
-(global-set-key (kbd "<f7>") '(lambda()
+(global-set-key (kbd "<f6>") '(lambda()
 				(interactive)
 				(ein:jupyter-server-start
 				 (executable-find
@@ -10,11 +13,9 @@
 				 "/Users/liangruijia/Documents")
 				(switch-to-buffer "*ein:notebooklist http://127.0.0.1:8888*")))
 ;; 退出jupyter
-(global-set-key (kbd "<f8>") '(lambda()
+(global-set-key (kbd "<f7>") '(lambda()
 				(interactive)
 				(ein:jupyter-server-stop)))
-;; 快捷注释
-(global-set-key [?\C-c ?\C-/] 'comment-or-uncomment-region)
 
 ;; 切换新行
 (global-set-key (kbd "<C-return>") '(lambda()
@@ -30,7 +31,7 @@
 		  (interactive)
 		  (if mark-active
 		      (kill-region (region-beginning)
-				   (+ 1 (region-end)))
+				   (region-end))
 		    (progn
 		      (kill-region (line-beginning-position)
 				   (+ 1 (line-end-position)))
@@ -42,7 +43,7 @@
 		  (interactive)
 		  (if mark-active
 		      (kill-ring-save (region-beginning)
-				      (+ 1 (region-end)))
+				      (region-end))
 		    (progn
 		      (kill-ring-save (line-beginning-position)
 				      (+ 1 (line-end-position)))
@@ -50,5 +51,14 @@
 
 ;;设置选中行
 (global-set-key (kbd "C-;") 'set-mark-command)
+
+;; 补全快捷键
+(global-set-key (kbd "<C-tab>") 'company-complete)
+;; 补全菜单选项快捷键
+(define-key company-active-map (kbd "C-n") 'company-select-next)
+(define-key company-active-map (kbd "C-p") 'company-select-previous)
+;; 补全菜单选项快捷键
+;;(define-key map "\C-n" 'ac-next)
+;;(define-key map "\C-p" 'ac-previous)
 
 (provide 'init-keybindings)
