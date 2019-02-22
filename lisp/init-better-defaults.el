@@ -76,5 +76,9 @@
 
 ;; (global-set-key "\C-n" 'ac-next)
 ;; (global-set-key "\C-p" 'ac-previous)
+;; 设置编码优先级
+(prefer-coding-system 'gb18030)
+(prefer-coding-system 'gbk)
+(prefer-coding-system 'utf-8)
 
 (provide 'init-better-defaults)
