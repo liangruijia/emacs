@@ -54,6 +54,9 @@
 
 ;; 补全快捷键
 (global-set-key (kbd "<C-tab>") 'company-complete)
+;; 换行操作
+(global-set-key (kbd "M-P") 'move-line-up)
+(global-set-key (kbd "M-N") 'move-line-down)
 ;; 补全菜单选项快捷键
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)

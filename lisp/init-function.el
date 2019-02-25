@@ -97,7 +97,21 @@ locate PACKAGE."
     ))
 
 ;;----------------------------------------------------------------------------
-;;
+;;向上移动行
 ;;----------------------------------------------------------------------------
-
+(defun move-line-up ()
+  "move up the current line"
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2))
+;;----------------------------------------------------------------------------
+;;向下移动行
+;;----------------------------------------------------------------------------
+(defun move-line-down ()
+  "move down the current line"
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1))
+  
 (provide 'init-function)
