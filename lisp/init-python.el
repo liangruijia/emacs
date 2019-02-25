@@ -23,6 +23,20 @@
 ;; (add-hook 'ein:notebook-mode-hook (lambda () (define-key map (kbd "C-n") 'ac-next)))
 ;; (add-hook 'ein:notebook-mode-hook (lambda () (define-key map (kbd "C-p") 'ac-previous)))
 
+;; 设置python-mode换行绑定
+(define-key elpy-mode-map (kbd "<C-return>") '(lambda()
+				      (interactive)
+				      (move-end-of-line 1)
+				      (newline-and-indent)))
+(define-key elpy-mode-map (kbd "<M-return>") '(lambda()
+						(interactive)
+						(elpy-shell-send-statement-and-step)
+				      (move-end-of-line 1)
+				      (newline-and-indent)))
+;; 
+;; (define-key elpy-mode-map (kbd "<M-return>") 'elpy-shell-send-statement-and-step)
+
+
 ;; 补全菜单选项快捷键
 (define-key ac-completing-map (kbd "C-n") 'ac-next)
 (define-key ac-completing-map (kbd "C-p") 'ac-previous)
