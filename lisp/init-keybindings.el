@@ -18,7 +18,7 @@
 				(ein:jupyter-server-stop)))
 
 ;; 切换新行
-(global-set-key (kbd "<C-return>") '(lambda()
+(global-set-key (kbd "<M-return>") '(lambda()
 				      (interactive)
 				      (move-end-of-line 1)
 				      (newline-and-indent)))
@@ -57,6 +57,10 @@
 ;; 补全菜单选项快捷键
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
+;; (define-key elpy-mode-map (kbd "<C-return>") '(lambda()
+;; 				      (interactive)
+;; 				      (move-end-of-line 1)
+;; 				      (newline-and-indent)))
 ;; 补全菜单选项快捷键
 ;;(define-key map "\C-n" 'ac-next)
 ;;(define-key map "\C-p" 'ac-previous)
