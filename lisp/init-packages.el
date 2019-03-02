@@ -40,6 +40,8 @@
 				 yaml-mode
 				 neotree
 				 all-the-icons
+				 js2-mode
+				 nodejs-repl
 				 )  "Default packages")
 
 (setq package-selected-packages liang/packages)

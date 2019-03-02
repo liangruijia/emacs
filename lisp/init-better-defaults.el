@@ -91,5 +91,11 @@
 (put 'downcase-region 'disabled nil)
 (put 'set-goal-column 'disabled nil)
 
+;; 设置js模式为js2mode
+(setq auto-mode-alist
+      (append
+       '(("\\.js\\'" . js2-mode))
+       auto-mode-alist))
+(require 'nodejs-repl)
 
 (provide 'init-better-defaults)
