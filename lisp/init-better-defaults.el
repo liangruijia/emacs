@@ -37,6 +37,13 @@
 ;;命令查找
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
+(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-c C-f") 'counsel-find-file)
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+(global-set-key (kbd "<f1> k") 'counsel-descbinds)
 
 ;;(global-company-mode t)
 (require 'company)
@@ -70,8 +77,6 @@
 (setq initial-buffer-choice 'xah-new-empty-buffer)
 
 ;;设置neotree的样式
-;;(require 'all-the-icons)
-
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 ;; (global-set-key "\C-n" 'ac-next)
@@ -80,5 +85,11 @@
 (prefer-coding-system 'gb18030)
 (prefer-coding-system 'gbk)
 (prefer-coding-system 'utf-8)
+
+;; 设置开启大小写转换
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+(put 'set-goal-column 'disabled nil)
+
 
 (provide 'init-better-defaults)

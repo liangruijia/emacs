@@ -8,7 +8,7 @@
 
 (setq-default cursor-type 'bar)
 
-(setq  initial-frame-alist (quote ((fullscreen . maximized))))
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
 
 (global-hl-line-mode t)
 
