@@ -11,7 +11,8 @@
 ;;  (add-to-list 'package-archives '(("gnu" . "http://elpa.emacs-china.org/gnu/")
   ;;				   ("melpa" . "http://elpa.emacs-china.org/melpa/")) t)
   (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-			 ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+			   ("melpa" . "http://elpa.emacs-china.org/melpa/")
+			   ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/")))
   )
 
 
@@ -42,6 +43,7 @@
 				 all-the-icons
 				 js2-mode
 				 nodejs-repl
+				 go-mode
 				 )  "Default packages")
 
 (setq package-selected-packages liang/packages)

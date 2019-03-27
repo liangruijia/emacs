@@ -74,7 +74,7 @@
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 ;;设置默认打开空白
-(setq initial-buffer-choice 'xah-new-empty-buffer)
+;; (setq initial-buffer-choice 'xah-new-empty-buffer)
 
 ;;设置neotree的样式
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
